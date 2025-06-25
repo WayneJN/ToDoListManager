@@ -32,6 +32,7 @@ A simple, interactive Java console application that lets multiple users manage t
    package com.Wayne.todolist;
 4. Run Main.java to start the console-based menu.
 
+---
 ## 📖 How It Works
 Upon running, you'll be greeted with an interactive menu:
 
@@ -45,10 +46,10 @@ Menu:
 5. Exit
 
 
-➕ Add User
+## ➕ Add User
 Enter a new username (must be unique).
 
-✍️ Add Task
+## ✍️ Add Task
 Choose an existing user.
 
 Enter the task description.
@@ -57,16 +58,16 @@ Enter the task description.
 
 (Optional) Choose a priority: Low, Medium, or High.
 
-✅ Mark Task as Completed
+## ✅ Mark Task as Completed
 Choose a user.
 
 Enter the exact task description to mark it complete.
 
-📋 View Tasks
+## 📋 View Tasks
 Prints all tasks for every user, including completion status, date, and priority.
 
 
-🚀 Future Enhancements
+## 🚀 Future Enhancements
 [ ] Edit or delete tasks
 
 [ ] View only completed or high-priority tasks
