@@ -5,13 +5,17 @@ import java.time.format.DateTimeFormatter;
 
 public class Task {
     //Create Priority levels
-    public enum Priority {Low, Medium, High};
+    public enum Priority {Low, Medium, High}
+
     //need to create a class to store the description
-    private String description;
+    private final String description;
+
     //need to identify when a task is completed, yes/no
     private boolean completed;
+
     //Local date and due date declaration to be used later
     private LocalDate dueDate;
+
     //Same for priority
     private Priority priority;
 
@@ -26,6 +30,7 @@ public class Task {
     public void markComplete() {
         this.completed = true;
     }
+
     public boolean isCompleted() {
         return completed;
     }
@@ -55,22 +60,19 @@ public class Task {
 
     public String toString() {
         // Completed or not
-        String status = completed ? "[✔]" : "[ ]";
+        String status = isCompleted() ? "[✔]" : "[ ]";
 
         // “dd/MM/yyyy” or “no-date”
-        String dateStr = (dueDate != null)
-                ? dueDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+        String dateStr = (getDueDate() != null)
+                ? getDueDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
                 : "no-date";
 
         // “LOW”/“MEDIUM”/“HIGH” or “no-prio”
-        String prioStr = (priority != null)
-                ? priority.name()
+        String prioStr = (getPriority() != null)
+                ? getPriority().name()
                 : "no-prio";
 
         // Put it all together
-         return String.format("%s %s %-6s — %s", status, dateStr, prioStr, description);
+        return String.format("%s %s %-6s — %s", status, dateStr, prioStr, getDescription());
     }
-
-
 }
-
