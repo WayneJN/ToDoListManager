@@ -78,6 +78,7 @@ Prints all tasks for every user, including completion status, date, and priority
 
 [ ] Graphical UI using JavaFX
 
+---
 
-👨‍💻 Author
+##👨‍💻 Author
 Built with care by Wayne DS&A Project · Summer 2025
